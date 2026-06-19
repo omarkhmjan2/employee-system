@@ -346,7 +346,7 @@ HTML_TEMPLATE = """
     </div>
     
     <div id="mainForm" class="main-form">
-        <h2>تسجيل عضو جديد</h2>
+        <h2>تسجيل عضو  جديد</h2>
         <div class="avatar-preview-container">
             <video id="video" autoplay playsinline muted></video>
             <div class="avatar-overlay">👤</div>
